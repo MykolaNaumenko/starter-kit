@@ -13,7 +13,7 @@
           <span class="title">Chucknoriss found:</span>
           <div class="jokes-wrapper">
               <div class="jokes-container">
-                  <div *ngFor="let joke of jokes; let i = index" class="joke-item">
+                  <div *ngFor="let joke of jokes | filter: inputValue; let i = index" class="joke-item">
                       <span>
                         {{i+1}}. Joke #{{i+1}}: {{joke?.value}}
                       </span>
