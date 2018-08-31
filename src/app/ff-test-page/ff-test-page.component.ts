@@ -7,7 +7,7 @@ import { GetService } from '@app/ff-test-page/getService.service';
   selector: 'ff-test-page',
   templateUrl: './ff-test-page.component.html',
   styleUrls: ['./ff-test-page.component.scss'],
-  providers: [GetService]
+  providers: [GetService],
 })
 export class FfTestPageComponent implements OnInit {
 
@@ -29,12 +29,9 @@ export class FfTestPageComponent implements OnInit {
   }
 
   public getJokes(value: any) {
-    console.log(value);
     this.getService.getJoke(value)
       .subscribe((jokes) => {
         this.jokes = jokes['result'];
-        console.log(this.jokes);
       });
-  
   }
 }
