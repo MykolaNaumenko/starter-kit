@@ -7,7 +7,7 @@ import { SharedModule } from '@app/shared';
 import { FfTestPageRoutingModule } from '@app/ff-test-page/ff-test-page-routing.module';
 import { FfTestPageComponent } from '@app/ff-test-page/ff-test-page.component';
 import { QuoteService } from '@app/ff-test-page/quote.service';
-
+import { FilterJokesPipe } from '@app/ff-test-page/filterJokes.pipe';
 
 @NgModule({
   imports: [
@@ -18,10 +18,12 @@ import { QuoteService } from '@app/ff-test-page/quote.service';
     FfTestPageRoutingModule
   ],
   declarations: [
-    FfTestPageComponent
+    FfTestPageComponent,
+    FilterJokesPipe
   ],
   providers: [
-    QuoteService
+    QuoteService,
+    FilterJokesPipe
   ]
 })
 export class FfTestPageModule { }
