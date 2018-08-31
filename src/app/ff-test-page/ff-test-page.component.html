@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="jumbotron text-center">
+    <h1>
+      <span translate>Chuckie's Jokes!</span>
+    </h1>
+    <app-loader [isLoading]="isLoading"></app-loader>
+
+    <div [hidden]="isLoading">
+        <input type="text" #inputValue value="{{inputValue.value || placeHolder}}">
+        <button (click)="getJokes(inputValue.value)">Get Jokes</button>
+        
+        <div *ngIf="jokes">
+          <span class="title">Chucknoriss found:</span>
+          <div class="jokes-wrapper">
+              <div class="jokes-container">
+                  <div *ngFor="let joke of jokes; let i = index" class="joke-item">
+                      <span>
+                        {{i+1}}. Joke #{{i+1}}: {{joke?.value}}
+                      </span>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.logo {
+  width: 100px;
+}
+
+q {
+  font-style: italic;
+  font-size: 1.2rem;
+  quotes: "« " " »";
+}
+
+.jokes-wrapper {
+  display: flex;
+}
+
+.jokes-container {
+  width: 672px;
+  margin: 0 auto;
+  text-align: left;
+}  
+
+.title {
+  display: block;
+  margin: 24px 0;
+}
+.joke-item {
+  margin-bottom: 16px;
+}
